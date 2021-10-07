@@ -1,26 +1,30 @@
-/*************************************************
-Reto: Programa que convierte el número de minutos
-ingresados a días y años
-**************************************************/
+/* Reto: Programa que imprima el tamaño de byte
+de tipos de datos básicos */
 
 #include <stdio.h>
 
 int main(){
     //Variables
-    int min=0;
-    double dias=0;
-    double años=0;
+    int sizeint=0;
+    int sizechar=0;
+    int sizelong=0;
+    int sizelonglong=0;
+    int sizedouble=0;
+    int sizelongdouble=0;
 
-    //Input
-    printf("Inserta la cantidad de minutos que quieres convertir a días y años, solo enteros:");
-    scanf("%d", &min);
-
-    //Operaciones
-    dias = ((double)min)/1440;
-    años = dias/365;
+    //Operations
+    sizeint = sizeof(int);
+    sizechar = sizeof(char);
+    sizelong = sizeof(long);
+    sizelonglong = sizeof(long long);
+    sizedouble = sizeof(double);
+    sizelongdouble = sizeof(long double);
 
     //Output
-    printf("%d minutos son %f días o %f años.\n",min,dias,años);
-    printf("################################################");
+    printf("Int: %zd\nChar: %zd\nLong: %zd\nLong Long: %zd\nDouble: %zd\nLong Double: %zd", sizeint,sizechar,sizelong,sizelonglong,sizedouble,sizelongdouble);
+    
+    return 0;
 }
+
+
 
